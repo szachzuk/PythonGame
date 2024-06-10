@@ -1,0 +1,11 @@
+20 20
+{"name": "B", "position": [6, 6], "strength": 10}
+{"name": "B", "position": [6, 0], "strength": 10}
+{"name": "O", "position": [5, 5], "strength": 11}
+{"name": "S", "position": [0, 5], "strength": 4}
+{"name": "S", "position": [2, 2], "strength": 4}
+{"name": "S", "position": [4, 3], "strength": 4}
+{"name": "S", "position": [3, 0], "strength": 4}
+{"name": "S", "position": [0, 3], "strength": 4}
+{"name": "S", "position": [4, 2], "strength": 4}
+{"name": "B", "position": [5, 0], "strength": 10}

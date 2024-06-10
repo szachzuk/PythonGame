@@ -1,0 +1,241 @@
+{
+    "measurements": [
+        20,
+        20
+    ],
+    "organisms": [
+        {
+            "name": "J",
+            "position": [
+                4,
+                15
+            ],
+            "strength": 99
+        },
+        {
+            "name": "J",
+            "position": [
+                1,
+                5
+            ],
+            "strength": 99
+        },
+        {
+            "name": "J",
+            "position": [
+                15,
+                17
+            ],
+            "strength": 99
+        },
+        {
+            "name": "G",
+            "position": [
+                8,
+                7
+            ],
+            "strength": 0
+        },
+        {
+            "name": "G",
+            "position": [
+                3,
+                14
+            ],
+            "strength": 0
+        },
+        {
+            "name": "U",
+            "position": [
+                14,
+                19
+            ],
+            "strength": 0
+        },
+        {
+            "name": "U",
+            "position": [
+                3,
+                3
+            ],
+            "strength": 0
+        },
+        {
+            "name": "U",
+            "position": [
+                2,
+                16
+            ],
+            "strength": 0
+        },
+        {
+            "name": "M",
+            "position": [
+                19,
+                1
+            ],
+            "strength": 0
+        },
+        {
+            "name": "M",
+            "position": [
+                12,
+                9
+            ],
+            "strength": 0
+        },
+        {
+            "name": "B",
+            "position": [
+                11,
+                6
+            ],
+            "strength": 10
+        },
+        {
+            "name": "B",
+            "position": [
+                2,
+                5
+            ],
+            "strength": 10
+        },
+        {
+            "name": "M",
+            "position": [
+                18,
+                0
+            ],
+            "strength": 0
+        },
+        {
+            "name": "B",
+            "position": [
+                10,
+                5
+            ],
+            "strength": 10
+        },
+        {
+            "name": "B",
+            "position": [
+                1,
+                4
+            ],
+            "strength": 10
+        },
+        {
+            "name": "M",
+            "position": [
+                17,
+                0
+            ],
+            "strength": 0
+        },
+        {
+            "name": "T",
+            "position": [
+                9,
+                2
+            ],
+            "strength": 2
+        },
+        {
+            "name": "H",
+            "position": [
+                14,
+                6
+            ],
+            "strength": 5,
+            "turns_to_active": 0
+        },
+        {
+            "name": "A",
+            "position": [
+                7,
+                10
+            ],
+            "strength": 4
+        },
+        {
+            "name": "O",
+            "position": [
+                4,
+                14
+            ],
+            "strength": 11
+        },
+        {
+            "name": "O",
+            "position": [
+                10,
+                12
+            ],
+            "strength": 11
+        },
+        {
+            "name": "O",
+            "position": [
+                8,
+                13
+            ],
+            "strength": 11
+        },
+        {
+            "name": "S",
+            "position": [
+                19,
+                3
+            ],
+            "strength": 4
+        },
+        {
+            "name": "S",
+            "position": [
+                8,
+                15
+            ],
+            "strength": 4
+        },
+        {
+            "name": "S",
+            "position": [
+                6,
+                19
+            ],
+            "strength": 4
+        },
+        {
+            "name": "W",
+            "position": [
+                11,
+                9
+            ],
+            "strength": 9
+        },
+        {
+            "name": "W",
+            "position": [
+                14,
+                7
+            ],
+            "strength": 9
+        },
+        {
+            "name": "F",
+            "position": [
+                10,
+                11
+            ],
+            "strength": 3
+        },
+        {
+            "name": "F",
+            "position": [
+                10,
+                2
+            ],
+            "strength": 3
+        }
+    ]
+}
