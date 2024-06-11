@@ -151,7 +151,7 @@ class World:
         elif name == 'B':
             org = Sosnowski(self, position)
 
-
+        
         return org
 
     def AddLog(self, message: str) -> None:

@@ -51,16 +51,6 @@ class Graphics:
 
         pygame.draw.rect(self.__window, OUTLINE_COLOR, (0,0, self.__WIDTH, self.__HEIGHT), OUTLINE_THICKNESS)
 
-    def AddOrg(self, world, position: Tuple[int, int]):
-        pos = self.MouseClickCoordinates(position)
-        if world.IsEmptyPosition(pos):
-            name = input("Podaj nazwe organismu: ")
-            org = world.NewOgranismFromName(name, pos)
-            if org is not None:
-                world.AddOrganism(org)
-            else:
-                print("Taki organizm nie istnieje")
-
 
     def DrawOrganisms(self, all_ogranisms: List["Organism"]):
         for org in all_ogranisms:
@@ -69,9 +59,65 @@ class Graphics:
             text_rect = text.get_rect(center=window_coordinates)
             self.__window.blit(text, text_rect)
 
+
     def Draw(self, all_organisms: List["Organism"]):
         self.__window.fill(BACKGROUND_COLOR)
         self.DrawGrid()
         self.DrawOrganisms(all_organisms)
         pygame.display.update()
+
+
+    def GetNewOrganism(self, window):
+        list_of_all_organisms = {
+            "Cyber_owca": "O",
+            "Wilk": "W",
+            "Owca": "S",
+            "Lis": "F",
+            "Antylopa": "A",
+            "Zolw": "T",
+            "Wilcze_jagody": "J",
+            "Barszcz_sosnowskiego": "B",
+            "Trawa": "G",
+            "Guarana": "U",
+            "Mlecz": "M",
+        }
+
+        menu_active = True
+        while menu_active:
+            window.fill((255, 255, 255))
+            y_poz = 20
+            font = pygame.font.Font(None, 36)
+            organism_rects = []
+
+            for i, nazwa in enumerate(list_of_all_organisms.keys()):
+                text = font.render(nazwa, True, (0, 0, 0))
+                text_rect = window.blit(text, (20, y_poz))
+                organism_rects.append((text_rect, list_of_all_organisms[nazwa]))
+                y_poz += 40
+
+            pygame.display.flip()
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    mysz_x, mysz_y = event.pos
+                    for rect, symbol in organism_rects:
+                        if rect.collidepoint(mysz_x, mysz_y):
+                            return symbol
+
+    def AddOrg(self, world, position: Tuple[int, int]):
+        pos = self.MouseClickCoordinates(position)
+        print(f"Clicked Position: {position}, Translated Position: {pos}")
+        if world.IsEmptyPosition(pos):
+            name = self.GetNewOrganism(self.__window)
+            print(f"Selected Organism: {name}")
+            if name is not None:
+                new_org = world.NewOgranismFromName(name, pos)
+                world.AddOrganism(new_org)
+                print(f'Organism {name} added on position {pos}')
+        else:
+            print(f"Position {pos} is not empty.")
+        self.Draw(world.GetAllOrganism())
 

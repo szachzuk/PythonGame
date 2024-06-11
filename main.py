@@ -37,7 +37,7 @@ def Game(world: "World"):
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     world.GameLoop()
-            elif event.type == pygame.MOUSEBUTTONUP:
+            elif event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 world.graphics.AddOrg(world, pos)
                 world.graphics.Draw(world.GetAllOrganism())
